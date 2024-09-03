@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{width: 300px; height: 200px; border: 3px solid black; margin-bottom: 20px;}
+    span{display: inline-block; width: 100px; height: 50px; border: 3px solid black; margin-bottom: 20px;}
+    /*display block으로 설정하면 div와 비슷함. div 블록에도 inline 옵션 부여할수 있음*/
+  </style>
+</head>
+<body>
+  <div>div square model</div>
+  <div>div square model
+    <span>span square model</span>
+    <span>span square model</span>
+    <span>span square model</span>
+  </div>
+  
+  <span>span square model</span>
+  <span>span square model</span>
+  <span>span square model</span>
+
+  <!-- div는 블록 방식 (별도의 지정이 없다면 다음 블록이 무조건 하단으로 내려감)-->
+  <!-- span 은 인라인 방식(별도의 지정이 없다면 다음 블록이 빈 우측으로 생성되고 자리가 없으면 하단으로 내려감)-->
+</body>
+</html>
