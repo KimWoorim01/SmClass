@@ -4,12 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>link</title>
+  <style>
+    ul{list-style: none;}
+    li{width: 120px; height: 40px; border: 1px solid black; text-align: center; line-height: 40px; background: lightblue;}
+    a{text-decoration: none; color: inherit;}
+  </style>
+
 </head>
 <body>
   <ul>
-    <a href="http://www.google.com"><li>구글</li></a>
-    <a href="http://www.daum.net"><li>다음</li></a>
-    <a href="http://www.naver.com"><li>네이버</li></a>
+    <a href="http://www.google.com"><li>구글</li></a> <!-- 이방식은 잘 쓰지 않는다-->
+
+
+    <li><a href="http://www.daum.net" target="_blank">다음</a></li>
+    <li><a href="http://www.naver.com" target="_self">네이버</a></li>
+
+    <a href="https://www.news1.kr/_next/image?url=https%3A%2F%2Fi3n.news1.kr%2Fsystem%2Fphotos%2F2024%2F7%2F21%2F6771552%2Fhigh.jpg&w=1920&q=75" download>이미지파일</a>
   </ul>
 </body>
 </html>
