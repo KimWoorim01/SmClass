@@ -6,34 +6,39 @@
   <title>앵커태그</title>
   <style>
     *{margin: 0; padding: 0;}
-    #main{width: 900px; height: 2000px; margin-left: 50px; border: 1px solid black;}
-    li{width: 140px; height: 40px; border: 1px solid black; background: lightskyblue; float: left; text-align: center; line-height: 40px;}
+    #main{float: left; text-align: center; line-height: 40px;}
+    header{position: fixed;}
+    li{width: 225px; box-sizing: border-box; height: 60px; border: 1px solid black; background: lightskyblue; float: left; text-align: center; line-height: 60px;}
     /*clear:both 는 li 옆에 section 붙는걸 방지*/
     section{clear: both;}
     ul{list-style: none;}
     h3{margin-top: 200px; margin-bottom: 30px;}
     a{text-decoration: none; color: inherit;}
+    img{width: 900px;}
+    .loc{width: 900px; margin-left: 50px; border: 1px solid black; background: lightcyan; margin-top: 50px; margin-bottom: 50px;}
+    .align{text-align: right;}
+    
   </style>
 </head>
 <body>
-  <div id="main">
+  <div id="main"  class="loc">
     <header>
       <ul>
-        <li>책소개</li>
-        <li>상세이미지</li>
-        <li>저자소개</li>
-        <li>저자소개</li>
-        <li>회원리뷰</li>
+        <li><a href="#content1">책소개</a></li>
+        <li><a href="#content2">상세이미지</a></li>
+        <li><a href="#content3">저자소개</a></li>
+        <li><a href="#content4">추천평</a></li>
       </ul>
     </header>
     <section>
-      <h3>책소개</h3>
+      <h3 id="content1">책소개</h3>
       <p>
         <strong>요새 무슨 음악 들어요? 어떤 음악 좋아해요?</strong><br><br>
         최근에 듣고 좋았던 곡을 떠올려보자. 그 노래가 왜 좋았을까? 호소력 짙은 보컬의 목소리였을까? 눈앞에서 연주하는 듯한 밴드의 생생한 연주 실력? 내 마음을 그대로 표현한 가사가 귀에 쏙 들어왔는가? 리듬 타기 좋은 그루브였나? 쾌감마저 느껴지는 뛰어난 후렴구에 마음을 빼앗겼는가?
         <br><br>
         이 세상에는 음악이 넘쳐난다. 나쁜 음악은 없다. 그저 내가 좋아하는 음악과 내 취향이 아닌 음악이 있을 뿐이다. 왜 어떤 사람은 록을, 어떤 사람은 재즈를, 어떤 사람은 팝 음악을, 힙합을, 클래식을 좋아할까? 음악 취향을 장르로만 규정지을 수도 없다. 한 장르의 음악만 파는 사람도 있지만 여러 장르의 음악을 즐기는 사람이 더 많다. 취향은 분명 존재하지만 말로 설명하기 어렵다.
       </p>
+      <div  class="align"><a href="#main">top↑</a></div>
       <h3>목차</h3>
       <p>
         1장 진정성: 표현의 출처
@@ -81,10 +86,15 @@
         첫눈에 반하다 | 〈Old Town Road〉로 보는 청취 프로필 분석 | 멍때리기 연결망과 미적 즐거움 | 좋아하는 노래를 들을 때 우리 뇌는 | 나의 음악이 사는 동네 | 첫귀에 반한 아홉 가지 사랑의 추억
         <br><br>
       </p>
-      <h3>상세이미지</h3>
+      <br>
+      <div  class="align"><a href="#main">top↑</a></div>
+      <br>
+      <h3 id="content2">상세이미지</h3>
       <img src="img/book1.jpg" alt="책 이미지">
       <br>
-      <h3>저자소개</h3>
+      <div  class="align"><a href="#main">top↑</a></div>
+      <br>
+      <h3 id="content3">저자소개</h3>
       <p>
         저:수전 로저스 (Susan Rogers) <br>
         <br>
@@ -96,7 +106,37 @@
         악기를 전혀 다룰 줄 모르면서도 음반을 듣고 또 들으며 음반을 만드는 사람이 되는 꿈을 키웠다. <br>
         집안 사정으로 고등학교를 중퇴하고 공장에서 ...
       </p>
+
+      <br>
+      <div  class="align"><a href="#main">top↑</a></div>
+
+      <br>
+      <h3 id="content4">추천평</h3>
+      <p>
+        <br>
+        저는 아티스트도 업계 종사자도 아닌 ‘방구석 리스너’입니다. <br>
+        음악을 만들어본 적도 악기를 다뤄본 적도 없지만 제 청취 경험을 공유하는 것만으로 30만 명의 선택을 받았습니다. <br>
+        이런 시대입니다. 이런 유의 음악 채널이 유행하고, 플레이리스트와 리스닝 파티가 <br>
+        일상에 스며들고 있는 대(大) 리스너의 시대입니다. <br>
+        신기하게도 이 책은 현시대가 필요로 하는 정보와 감수성을 모두 담고 있습니다. <br>
+        구체적으로는 우리의 청취 경험을 결정짓는 일곱 가지 요소를 집요하게 파고드는데, <br>
+        하나의 개념을 설명할 때마다 풍부한 예시를 들어 시간가는 줄 모르고 읽게 됩니다. <br>
+        과거의 음악과 오늘날의 음악을 넘나들고, 음악사에 영향을 끼친 각종 사건을 매력적인 스토리텔링으로 소개합니다. <br>
+        첫 페이지를 읽는 순간 머리가 지끈거렸고, 읽는 내내 제 안에서 할 말이 넘쳐났습니다. <br>
+        장담컨대 기존의 대중음악서와는 다른 차원의 영감을 제공할 것입니다. <br>
+        궁극적으로 끊임없이 나 자신과의 대화를 유도해 내 취향을 파악하는 데 도움을 줍니다. <br>
+        나아가 상대의 취향을 존중해야 하는 이유까지 배우게 됩니다. 꼭 읽어보세요. <br>
+        이런 굉장한 책에 추천사를 쓸 수 있게 되어 영광입니다.
+      </p>
+
+      <br>
+      <div  class="align"><a href="#main">top↑</a></div>
+
     </section>
+
+    
   </div>
+
+
 </body>
 </html>
