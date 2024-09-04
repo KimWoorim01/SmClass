@@ -24,7 +24,7 @@
     <label>성별</label>
     <input type="radio" id="male" name="gender" value="male">
     <label for="male">남자</label>
-    <input type="radio" id="female" name="gender" value="female">
+    <input type="radio" id="female" name="gender" value="female" checked>
     <label for="female">여성</label>
     <br>
     
@@ -53,9 +53,13 @@
     <input type="checkbox" id="ho_running" name="hobby" value="running">
     <label for="ho_running">달리기</label>
     <br>
+    <textarea cols="200" rows="30" name="content" ></textarea>
+    <br>
     <input type="submit" value="로그인">
     <br>
-
+    <br>
+    <button type="button" onclick="frmBtn()">로그인</button>
+  </form>
     <script>
 
       function frmBtn(){
@@ -71,9 +75,6 @@
       }
 
     </script>
-
-    <button type="button" onclick="frmBtn()">로그인</button>
-  </form>
 
 </body>
 </html>
