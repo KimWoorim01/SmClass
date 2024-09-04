@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네이버 : 로그인</title>
+
+  <style>
+    #main {
+      width: 480px;
+      height: 500px;
+      border: 1px solid #e1e3e5;
+      border-radius: 12px;
+      margin: 50px auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #09aa5c;
+      font-weight: 900;
+    }
+
+    form {
+      width: 410px;
+      margin: 0 auto;
+    }
+
+    input {
+      width: 410px;
+      height: 40px;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    #err {
+      color: red;
+      font-weight: 700;
+    }
+
+    button {
+      width: 410px;
+      height: 60px;
+      margin-top: 30px;
+      background: #09aa5c;
+      border: none;
+      color: white;
+      font-size: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="main">
+    <header>
+      <h1>NAVER</h1>
+    </header>
+
+    <section>
+      <form action="http://www.daum.net" method="get" name="loginFrm">
+        <input type="hidden" name="ip" value="127.0.0.1"><br>
+        <input type="text" name="id" id="inputid" placeholder="아이디 또는 전화번호" autofocus><br>
+        <input type="password" name="pw" id="inputpw" placeholder="비밀번호"><br>
+        <div id="err"></div>
+        <button type="button" onclick="LoginBtn()">로그인</button>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    function LoginBtn(){
+      var sid = document.getElementById("inputid").value;
+      var spw = document.getElementById("inputpw").value;
+
+      if(sid == ""){
+        var textId = "아이디를 입력하세요";
+        document.getElementById("err").innerText = textId;
+        document.getElementById("inputid").focus();
+        return;
+      }else{
+        alert("id = "+ sid);
+      }
+
+      if(spw == ""){
+        var textPw = "비밀번호를 입력하세요";
+        document.getElementById("err").innerText = textPw;
+        document.getElementById("inputpw").focus();
+        return;
+      }else{
+        alert("pw = " + spw);
+      }
+      
+      loginFrm.submit();
+    }
+  </script>
+</body>
+
+</html>
