@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 스크립트를 제대로 못 불러올 경우 live 서버에서 실행해야 한다. -->
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <title>회원가입화면 만들기</title>
+  
+
+   <style>
+    *{margin: 0; padding: 0 auto;}
+    #pForm{width: 700px; height: 700px; border: 1px solid black; margin-left: 100px; margin-top: 100px;}
+    input{margin-top: 5px;}
+    label{width: 30%; margin-top: 20px; margin-left: 20px;margin-right: 20px;}
+    h2{margin-left: 10px;margin-top: 20px; margin-bottom: 20px;}
+    button{margin-left: 20px;}
+    span{margin-left: 20px;}
+    
+    .on{color: blue;}
+    .off{color: red;}
+  </style>
+</head>
+<body>
+  
+  <div>
+
+    <form action="" name="frm" method="get" id="pForm">
+      <h2>회원가입</h2>
+      <label>이름</label>
+      <input type="text" name="name" id="pName"><br>
+      <label>아이디</label>
+      <input type="text" name="id" id="pId">
+      <button type="button" id="pCheckId">아이디 중복확인</button>
+      <br>
+      <label>비밀번호</label>
+      <input type="password" name="pw" id="pPw"><br>
+      <label>비밀번호 확인</label>
+      <input type="password" name="checkPw" id="pCheckPw" onkeyup="onKeyUp()">
+      <button type="button" id="btnCheckPw" onclick="onBtnCheckPw()">비밀번호 확인</button>
+      <br>
+      <span id="pCheckResultText" hidden>비밀번호가 일치합니다.</span>
+      <br>
+      <label>생년월일</label>
+      <input type="date" name="birth" id="pBirth"><br>
+      <label>성별</label>
+      <label for="pMale">남성</label>
+      <input type="radio" name="gender" id = pMale value="male">
+      <label for="pFemale">여성</label>
+      <input type="radio" name="gender" id = pFemale value="female">
+      <br>
+      <label>이메일</label>
+      <input type="text" name="email1" id="pMail1">@
+      <input type="text" name="email2" id="pMail2">
+      <select id="pSelMail" onchange="emailChange()">
+        <option value="">직접입력</option>
+        <option value="naver.com">네이버</option>
+        <option value="daum.net">다음</option>
+        <option value="gmail.com">구글</option>
+      </select>
+      <br>
+      <label>우편번호</label>
+      <input type="text" name="post" id="pPost">
+      <button type="button" id="btnPost" onclick="btnAdd()"> 주소 검색</button>
+      <br>
+      <label>주소</label>
+      <input type="text" name="address" id="pAddress">
+      <input type="text" name="subAddress" id="pSubAddress">
+      <br>
+      <br>
+      <br>
+      <button type="button" id="btnInsert" onclick="btnInsert()">회원가입</button>
+      <button type="button" id="btnCancel">취소</button>
+      <br>
+    </form>
+  </div>
+
+  
+  <script>
+    var pForm = document.getElementById("pForm");
+    var pName = document.getElementById("pName");
+    var pId = document.getElementById("pId");
+    var pCheckId = document.getElementById("pCheckId");
+    var pPassWord = document.getElementById("pPw");
+    var pCheckPw = document.getElementById("pCheckPw");
+    var pCheckResultText = document.getElementById("pCheckResultText");
+
+    var btnCheckPw = document.getElementById("btnCheckPw");
+    var pMail1 = document.getElementById("pMail1");
+    var pMail2 = document.getElementById("pMail2");
+    var pSelMail = document.getElementById("pSelMail");
+    var pBirth = document.getElementById("pBirth");
+    var pGender = "";
+    var pMale = document.getElementById("pMale");
+    var pFemale = document.getElementById("pFemale");
+
+    var pPost = document.getElementById("pPost");
+    var pAddress = document.getElementById("pAddress");
+    var pSubAddress = document.getElementById("pSubAddress");
+
+    function btnAdd(){
+        //alert("주소를 호출합니다.");
+        
+        new daum.Postcode({
+          oncomplete: function(data) {
+              
+            pPost.value = data.zonecode;
+            pAddress.value = data.address;
+          }
+        }).open();
+        
+    }
+    /*
+    function onBtnCheckPw(){
+      var passData = pPassWord.value;
+      var CheckPwData = pCheckPw.value;
+
+      if(passData == CheckPwData){
+        pCheckResultText.innerText = "비밀번호가 일치합니다.";
+        pCheckResultText.hidden = false;
+      }else{
+        pCheckResultText.innerText = "비밀번호가 다릅니다."
+        pCheckResultText.hidden = false;
+        pCheckPw.focus();
+      }
+
+    }
+    */
+    function onKeyUp(){
+      var passData = pPassWord.value;
+      var CheckPwData = pCheckPw.value;
+
+      if(passData == CheckPwData){
+        pCheckResultText.innerText = "비밀번호가 일치합니다.";
+        pCheckResultText.classList.remove("off");
+        pCheckResultText.classList.add("on");
+        pCheckResultText.hidden = false;
+      }else{
+        pCheckResultText.innerText = "비밀번호가 다릅니다."
+        pCheckResultText.classList.remove("on");
+        pCheckResultText.classList.add("off");
+        pCheckResultText.hidden = false;
+      }
+    }
+
+    function emailChange(){
+
+      if(pSelMail.value == ""){
+        pMail2.readOnly = false;
+        pMail2.focus();
+      }else{
+        pMail2.readOnly = true;
+      }
+      
+      pMail2.value = pSelMail.value;
+
+    }
+
+    function btnInsert(){
+
+
+    }
+
+  </script>
+</body>
+</html>

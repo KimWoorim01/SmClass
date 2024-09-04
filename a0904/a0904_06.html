@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #textdiv{width: 600px; height: 100px; border: 1px solid black; text-align: center; font-size: 15px;}
+  </style>
+</head>
+
+<body>
+  <label>이메일</label>
+  <form action="" name="frm" method="get">
+
+    <input type="text" name="email1" id ="email1" onkeyup="funkOnKeyUp()">@
+    <input type="text" name="email2" id="email2">
+    <select name="email3" id="email3" onchange="getSel()">
+      <option value="">직접입력</option>
+      <option value="naver.com">naver.com</option>
+      <option value="gmail.com">gmail</option>
+      <option value="daum.net">daum.net</option>
+    </select>
+    <br>
+    <button type="button" onclick="ebtn()">버튼</button>
+  </form>
+  <div id="textdiv">test</div>
+  <script>
+    var pText = document.getElementById("textdiv");
+    var pMail = document.getElementById("email1");
+    var pMail2 = document.getElementById("email2");
+    
+    function funkOnKeyUp(){  
+      var sData = pMail.value;
+      pText.innerText = sData;
+    }
+
+    function ebtn(){
+
+    }
+
+    function getSel(){
+      
+      var sMail = pMail2.value;
+      if(sMail == ""){
+        pMail2.readOnly = false;
+        pMail2.focus();
+      }else{
+        pMail2.readOnly = true;
+      }
+      pMail2.value = sMail;
+      
+      //alert(sMail);
+    }
+
+
+  </script>
+
+</body>
+
+</html>
