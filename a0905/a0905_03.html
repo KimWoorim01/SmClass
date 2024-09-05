@@ -43,10 +43,32 @@
       /* overflow: hidden; */                              /* div 박스에서 벗어나면 글자를 숨긴다 */
       overflow: scroll;
     }
+
+    h3{
+      margin: 0 auto;
+      margin-bottom: 20px;
+      width: 300px;
+      height: 100px;
+      border: 1px solid black;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;                              /* 말줄임표 */
+    }
+    /* hover 마우스 위에 올림 */
+    h3:hover{
+      white-space: inherit;
+      overflow: visible;
+    }
+
   </style>
 </head>
 
 <body>
+  <h3>
+    빙그레(대표이사 박영준)가 새로운 한글 글꼴인 빙그레체를 무료 배포하고 있다.
+    빙그레는 지난해 10월7일 한글 보급과 활성화를 목적으로 세종대왕기념사업회(회장 최홍식),
+    빙그레(대표이사 박영준)가 새로운 한글 글꼴인 빙그레체를 무료 배포하고 있다.
+  </h3>
   <div>
     빙그레(대표이사 박영준)가 새로운 한글 글꼴인 빙그레체를 무료 배포하고 있다.
     빙그레는 지난해 10월7일 한글 보급과 활성화를 목적으로 세종대왕기념사업회(회장 최홍식),
