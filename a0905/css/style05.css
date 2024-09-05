@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  color: #1f3a53;
+}
+
+section{
+  width: 657px;
+  height: 1500px;
+  border: 1px solid black;
+  margin: 50px auto;
+}
+
+.Content01{
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 30px;
+}
+
+.Cont_Text{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+img{
+  width: 100%;
+}
+
+h4{
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+p{
+  font-size: 16px;  
+  line-height: 1.5;
+}

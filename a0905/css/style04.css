@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+#container{
+  width: 1310px;
+  height: 1218px;
+  background: #f6f6f6;
+  margin: 100px auto;
+  padding: 40px 0;
+}
+
+.info {
+  margin: 0 auto;
+  width: 1200px;
+  height: 1140px;
+  display: flex;
+  justify-content: space-between;  /*center space-between*/
+  letter-spacing: -0.1;
+}
+
+.none-mark {
+  width: 542px;
+  height: 1138px;
+  margin-right: 50px;
+  }
+
+.marginT20 {
+  width: 680px;
+  height: 1138px;
+}
+
+dl {
+  margin-bottom: 30px;
+}
+
+dl strong {
+  font-size: 18px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+dt {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+dd {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.use01{
+  color: rgb(184, 49, 47);
+  list-style-position: inside;
+  margin-bottom: 15px;
+}
+
+.use01 span{
+  margin-left: 30px;
+  color: #666;
+}
+
+.use02{
+  list-style-position: inside;        /*글자가 아니라 앞의 기호를 기준으로 위치를 잡음*/
+}
