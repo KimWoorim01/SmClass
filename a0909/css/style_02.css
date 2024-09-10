@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.top_title{
+  width: 100%;
+  height: 32px;
+  background: black;
+}
+
+.top_title ul{
+  display: flex;
+  color: white;
+  font-size: 13px;
+  width: 500px;
+  float: right;
+  margin-right: 100px;
+  margin-top: 7px;
+}
+.top_title li{
+  width: 100px;
+  height: 17px;
+  text-align: center;
+  box-sizing: border-box;
+  border-left: 1px solid white;
+}
+
+.top_title #signin{
+  width: 80px;
+}
+
+.top_title #login{
+  width: 70px;
+}
+
+.top_title #center{
+  width: 100px;
+}
+
+.top_title #search{
+  width: 100px;
+}
+
+.top_title #card{
+  width: 100px;
+  border-right: 1px solid white;
+}
+
+.bottom_title{
+  width: 100%;
+  height: 82px;
+  display: flex;
+}
+
+.logo{
+  width: 150px;
+  height: 82px;
+  box-sizing: border-box;
+  padding: 25px;
+  padding-left: 40px;
+}
+
+.logo #logo_img{
+  width: 100px;
+  height: 30px;
+  background: url(../img/ico_set.png) -320px -385px no-repeat;
+  background-size: 800px 800px;
+}
+
+.menu{
+  width: 85%;
+  height: 82px;
+}
+
+.menu ul{
+  width: 650px;
+  height: 82px;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 25px;
+}
+
+.menu li{
+  width: 160px;
+}
+
+.menu li:hover{
+  border-bottom: 3px solid black;
+}
+
+.menu a{
+  font-size: 22px;
+  font-weight: 700;
+  color: black;
+}
+
+.menu #menu_3{
+  width: 100px;
+}
+
+.menu #menu_4{
+  width: 110px;
+}
+
+.menu #menu_5{
+  width: 120px;
+}
+
+.quick{
+  width: 200px;
+  height: 82px;
+  text-align: center;
+}
+
+.quick ul{
+  width: 130px;
+  height: 52px;
+  display: flex;
+  margin-top: 15px;
+}
+
+.quick li{
+  width: 62px;
+  height: 52px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 30px;
+  color: black;
+}
+
+.quick div{
+  left: -10px;
+  margin-top: 30px;
+  position: relative;
+  width: 50px;
+}
+
+
+.quick #quick_menu1 a{
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background: url(../img/ico_set.png) -584px -320px no-repeat;
+  background-size: 800px 800px;
+  text-decoration: none;
+}
+
+.quick a:link{
+  color: black;
+}
+
+.quick #quick_menu1 a span{
+  display: block;
+  width: 50px;
+  height: 20px;
+  position: relative;
+  top: 30px;
+  left: -5px;
+}
+
+.quick #quick_menu2 a{
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background: url(../img/ico_set.png) -628px -320px no-repeat;
+  background-size: 800px 800px;
+  text-decoration: none;
+}
+
+
+.quick #quick_menu2 a span{
+  display: block;
+  width: 50px;
+  height: 20px;
+  position: relative;
+  top: 30px;
+  left: -5px;
+}
+
+.banner {
+  width: 100%;
+  height: 640px;
+  background: url(../img/main_top.jpg) no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  padding-top: 100px;
+}
+
+.banner .banner_content{
+  width: 500px;
+  height: 400px;
+  margin-left: 350px;
+  border: 3px solid black;
+}
