@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    ul{
+      list-style: none;
+    }
+
+    table, th, td{
+      border-collapse: collapse;
+    }
+
+    h2{
+      width: 200px;
+      font-size: 40px;
+      font-weight: 700;
+      margin: 0 auto;
+      border: 1px solid black;
+      text-align: center;
+      margin-bottom: 50px;
+      margin-top: 50px;
+    }
+
+    #search_tab{
+      width: 400px;
+      margin: 0 auto;
+      display: flex;
+      margin-bottom: 30px;
+      border: 1px solid black;
+      align-items: center;
+    }
+
+    #data_Table{
+      width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      border-bottom: 2px solid black;
+    }
+
+    #data_Table th{
+      border-bottom: 2px solid black;
+      border-top: 2px solid black;
+      font-size: 16px;
+      font-weight: 700;
+      background: #f3f3f3;
+    }
+
+    #data_Table td {
+      border-bottom: 1px solid silver;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <section>
+    <h2>NOTICE</h2>
+    <div id="search_tab">
+      <select name="" id=""></select>
+      <input type="text">
+      <button type="button">검색</button>
+    </div>
+
+    <table id="data_Table">
+
+      <tr>
+        <th>NO.</th>
+        <th>제목</th>
+        <th>작성자</th>
+        <th>작성일</th>
+        <th>조회수</th>
+      </tr>
+      <tbody id = "tbody">
+
+      </tbody>
+    </table>
+  </section>
+
+  <script>
+    var data = "";
+    var count = 0;
+    while (count < 10) {
+      data += "<tr>";
+      data += "<td>" + count + "</td>";
+      data += "<td>예방관련 안내</td>";
+      data += "<td>관리자</td>";
+      data += "<td>2024-09-10</td>";
+      var indexCount = 100 + count;
+      data += "<td>" + indexCount + "</td>";
+      data += "</tr>";
+      count++;
+    }
+
+    document.getElementById("tbody").innerHTML = data;
+
+  </script>
+
+</body>
+
+</html>
