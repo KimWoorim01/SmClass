@@ -4,8 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    header{
+      width: 900px;
+      height: 300px;
+      margin: 30px auto;
+      border: 2px solid black;
+      display: flex;
+      flex-direction: row;             /* row 는 가로 column은 세로 정렬 */
+      flex-wrap: nowrap;                  /* nowrap 은 한줄에 구겨서 넣고 wrap 은 사이즈가 벗어나면 줄을 바꿈 */
+      /* justify로 div를 정렬하는데 쓴다 기억해두자 */
+      /* flex-start:왼쪽 정렬 flex-end: 왼쪽 정렬 center: 가운데 정렬 space-between 좌우정렬 flex-around: 간격 동일 배치*/
+      justify-content: flex-end;            
+      /* center:세로 중앙 정렬, flex-start 상단정렬, flex-end 하단정렬*/
+      align-items: flex-end;
+    }
+
+    div{
+      width: 100px;
+      height: 100px;
+      background: lightblue;
+      border: 5px solid black;
+      box-sizing: border-box;
+    }
+
+
+  </style>
 </head>
 <body>
-  
+  <header>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </header>
 </body>
 </html>
