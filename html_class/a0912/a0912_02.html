@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .main{
+      margin-top: 100px;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+    }
+    .move img{
+      width: 200px;
+    }
+    .move{
+      transition: 1s all ease-in;
+    }
+
+    .on{
+      /* transform: rotateX(180deg) scale(2); */
+      border: 3px solid lightblue;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    function btn(){
+      // alert("클릭");
+      // document.getElementById("d01").classList.add("on");
+      // document.getElementById("d01").classList.remove("on");
+      // element.className="on";
+      document.getElementById("d01").classList.toggle("on");
+    }
+  </script>
+  <button onclick="btn()">변형</button>
+  <br>
+  <div class="main">
+    <div class="move" id="d01">
+      <img src="img/car_01.png">
+    </div>
+  </div>
+
+</body>
+</html>
