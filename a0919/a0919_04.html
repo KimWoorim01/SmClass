@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // function btn(){
+    //   var num1 = document.getElementById("num").value;
+    //   var num2 = document.getElementById("num2").value;
+    //   var comp = Number(num1) * Number(num2);
+    //   document.getElementById("num3").value = comp;
+    // }
+  </script>
+  <style>
+    table,th,td{
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    table{
+      width: 800px;
+      margin: 50px auto;
+    }
+    th{
+      background: #efefef;
+      border-top: 2px solid black;
+    }
+    th,td{
+      width: 200px;
+      height: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <tr>
+      <th>번호</th>
+      <th>제목</th>
+      <th>작성일</th>
+      <th>조회수</th>
+    </tr>
+    <tbody id="tbody">
+
+    </tbody>
+  </table>
+  <button type="button" onclick = "data_read()"> 데이터 불러오기</button>
+
+  <script>
+
+    function data_read(){
+
+      var dataCount= 1;
+      var insertString = "";
+      
+      while(dataCount <= 10){
+        insertString = insertString + "<tr>";
+        insertString = insertString + "<td>"+dataCount+"</td>"
+        insertString = insertString + "<td>12월 연말 이벤트 안내</td>"
+        insertString = insertString + "<td>2024-12-24</td>"
+        insertString = insertString + "<td>"+(Number(1244)+(dataCount*21))+"</td>"
+        insertString = insertString + "</tr>";
+        dataCount++;
+      }
+
+      // console.log(insertString);
+      document.getElementById("tbody").innerHTML = insertString;
+    }
+
+  </script>
+
+  <!-- <form action="http://daum.net" name="frm" method="get">
+    <label for="">숫자1</label>
+    <input type="text" name="num" id="num"><br>
+    <label for="">숫자2</label>
+    <input type="text" name="num2" id="num2"><br>
+    <label for="">결과</label>
+    <input type="text" name="num3" id="num3"><br>
+    <input type="submit" value = "더하기"><br>
+    <input type="button" value = "더하기" onclick="btn()"><br>
+
+
+  </form>
+   -->
+</body>
+</html>
