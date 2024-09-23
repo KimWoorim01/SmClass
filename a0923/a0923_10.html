@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    #wrap{
+      width: 2000px;
+      height: 3000px;
+      border: 1px solid black;
+    }
+
+    #d_wrap{
+      position: fixed;
+    }
+    #txt{
+      width: 200px;
+      height: 100px;
+      border: 1px solid black;
+      background-color: lightgray;
+      font-size: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+
+    window.addEventListener("scroll",function(){
+      window.scrollY;
+      window.scrollX;
+      console.log(window.scrollY);
+      console.log(window.scrollX);
+
+      document.getElementById("txt").innerText = "Y : " +window.scrollY + ",  " + "X : " + window.scrollX;
+
+      if(window.scrollY >= 500 && window.scrollY < 1000){
+        document.getElementById("wrap").style.backgroundImage = "url(images/nw01.jpg)";
+      }else if(window.scrollY >= 1000 && window.scrollY < 2000){
+        document.getElementById("wrap").style.backgroundImage = "url(images/bg_main02.png)";
+      }else{
+        document.getElementById("wrap").style.backgroundImage = "url(images/img_main_slide_20240612_2_pc.jpg)";
+      }
+
+    });
+
+    function Btn500(){
+      window.scrollTo({top:500,behavior:"smooth"});
+    }
+
+    function Btn1000(){
+      window.scrollTo({top:1000,behavior:"smooth"});
+      
+    }
+    function Btn2000(){
+      window.scrollTo({top:2000,behavior:"smooth"});
+      
+    }
+  </script>
+
+  <div id="wrap">
+    <div id="d_wrap">
+      <div id="txt">000</div>
+      <button onclick= "Btn500()">500 이동</button>
+      <button onclick= "Btn1000()">1000 이동</button>
+      <button onclick= "Btn2000()">2000 이동</button>
+    </div>
+  </div>
+</body>
+</html>

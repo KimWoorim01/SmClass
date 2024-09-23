@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체</title>
+</head>
+
+<body>
+  <script>
+    var tday = new Date();
+
+    var year = tday.getFullYear();
+    var month = tday.getMonth();
+    var textMonth;
+    var date = tday.getDate();
+    var textDate;
+    var day = tday.getDay();
+    var txtday;
+
+    if (month > 10) {
+      textMonth = month + 1;
+    } else {
+      textMonth = "0" + (month + 1);
+    }
+
+    if (date < 10) {
+      textDate = "0" + date;
+    } else {
+      textDate = date;
+    }
+
+    switch (day) {
+      case 0:
+        txtday = "일요일";
+        break;
+      case 1:
+        txtday = "월요일";
+        break;
+      case 2:
+        txtday = "화요일";
+        break;
+      case 3:
+        txtday = "수요일";
+        break;
+      case 4:
+        txtday = "목요일";
+        break;
+      case 5:
+        txtday = "금요일";
+        break;
+      case 6:
+        txtday = "토요일";
+        break;
+    }
+    var textTime = year + "-" + textMonth + "-" + textDate;
+    document.write(textTime+ ", "+ txtday + "<br>");
+
+    var check = 0;
+    var getNum = "";
+    while(check == 0){
+      getNum = prompt("숫자를 입력");
+      if(getNum>99999 || getNum <= 9999){
+        alert("잘못된 숫자 입력")
+      }else{
+        check = 1;
+      }
+    }
+
+    console.log(getNum);
+    var numArr = [];
+  
+    for(var i = 0; i <getNum.length; i++){
+      numArr.push(getNum.charAt(i));
+    }
+    
+    console.log(numArr);
+
+    var total= 0;
+    for(var j = 0; j < numArr.length; j++){
+      total = total + Number(numArr[j])
+    }
+
+    console.log(total);
+
+    document.write(total + "<br>");
+
+
+  </script>
+</body>
+
+</html>

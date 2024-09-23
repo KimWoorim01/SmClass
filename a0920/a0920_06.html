@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //월 입력받아, 1~12
+    //12,1,2, = winter  3,4,5 = spring 6,7,8 = summer 9,10,11 = fall
+
+    var month = Number(prompt("월"));
+    var result = "";
+
+    if(month == 1 || month == 2 || month == 12){
+      result = "winter";
+    }else if(month == 3 || month == 4 || month == 5){
+      result = "spring";
+    }else if(month == 6 || month == 7 || month == 8){
+      result = "summer";
+    }else if(month == 9 || month == 10 || month == 11){
+      result = "fall";
+    }else{
+      result = "error";
+    }
+
+    document.write(result);
+
+  </script>
+</body>
+</html>

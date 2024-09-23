@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <form action="#" name="frm" method="get">
+    <label>아이디</label>
+    <input type="text" name="id" id="id"><br>
+    <label>비밀번호</label>
+    <input type="password" name="pw" id="pw"><br>
+
+    <input type="button" onclick="btnLogin()" value="로그인">
+  </form>
+
+  <script>
+
+    function btnLogin(){
+      var id = document.getElementById("id").value;
+      var pw = document.getElementById("pw").value;
+
+      if(id != "aaa"){
+        alert("ID error");
+        document.getElementById("id").value = "";
+        document.getElementById("pw").value = "";
+        return;
+      }
+
+      if(pw != "1111"){
+        alert("pw error");
+        document.getElementById("pw").value = "";
+        return;
+      }
+
+      location.href = "http://www.daum.net";
+      alert("login Ok");
+
+    }
+
+  </script>
+
+  <!-- <script>
+
+
+    var num = Number(prompt("숫자입력 요망"));
+    var result = "";
+    if(num > 0){
+      result = "양수";
+    }else if(num == 0){
+      result = "Zero";
+    }else{
+      result = "음수";
+    }
+
+    document.write(result);
+
+  </script> -->
+
+</body>
+</html>

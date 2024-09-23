@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>array object</title>
+</head>
+<body>
+  <script>
+
+
+    var index = 0;
+    var dataArr = new Array(6);
+
+    while(index < dataArr.length){
+      switch(index){
+        case 0:
+          var data = prompt("이름");
+          break;
+        case 1:
+          var data = prompt("국어");
+          break;
+        case 2:
+          var data = prompt("영어");
+          break;
+        case 3:
+          var data = prompt("수학");
+          break;
+        case 4:
+          var data = (Number(dataArr[1]) + Number(dataArr[2]) + Number(dataArr[3]));
+          break;
+        case 5:
+          var data = parseFloat(dataArr[4])/3;
+          break;
+        default:
+          break;
+      }
+
+      dataArr[index] = data;
+      index++;
+    }
+
+    var index2 = 0;
+    while(index2 < dataArr.length){
+      document.write(dataArr[index2] + "<br>");
+      index2++;
+    }
+
+
+    // var index = 0;
+    // var dataArr = new Array(10);                    //사전에 배열길이를 지정해줌.
+    // while(index < dataArr.length){                  //length로 배열의 길이를 불러와 index와 비교.
+    //   var data = prompt("숫자 입력 요망");
+    //   dataArr[index] = data;                        //dataArr배열의 index 자리에 data 입력
+    //   index++;
+    // }
+
+    // var index2 = 0;                                 //index를 초기화해서 써도 되지만 알아보기 쉬우라고 2를 만듬
+    // while(index2 < dataArr.length){
+    //   document.write(dataArr[index2] + "<br>");
+    //   index2++;
+    // }
+
+
+
+    // var arr = new Array(3);
+
+    // arr[0] = 100;
+    // arr[1] = 90;
+    // arr[2] = 95;
+
+    // document.write(arr);
+
+  </script>
+</body>
+</html>

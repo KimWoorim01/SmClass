@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var txt = "안녕하세요. 반갑습니다. 다음에 뵈요.";
+    document.write("길이 : "+ txt.length+"<br>");
+    document.write("문자 하나 가져오기 : "+txt.charAt(0)+ "<br>");
+    document.write("문자 여러개 가져오기 : " + txt.substr(7,5) + "<br>");
+    document.write("문자 여러개 가져오기 : " + txt.substring(7,10) + "<br>");
+    document.write("문자 전부 가져오기 : " + txt.substring(0,txt.length) + "<br>");
+    //indexOf 앞에서, lastIndexOf 뒤에서
+    document.write("문자존재 확인 : "+ txt.indexOf("다음에") + "<br>");
+    document.write("문자존재 확인 : "+ txt.indexOf("내일") + "<br>");
+    document.write("문자존재 확인 : "+ txt.indexOf("에") + "<br>");
+    
+    document.write("문자존재 확인 : "+ txt.match("다음") + "<br>");
+    document.write("문자존재 확인 : "+ txt.match("내일") + "<br>");
+    
+    document.write("문자존재 확인 : "+ txt.search("다음") + "<br>");
+    document.write("문자존재 확인 : "+ txt.search("내일") + "<br>");
+    
+    //replace - 문자변경, 하나만 진행
+    document.write("문자취환 : "+ txt.replace("내일", "tomorow") + "<br>");
+    document.write("문자취환 : "+ txt.replace("다음에", "tomorow") + "<br>");
+    //정규표현식 g:발생할 모든 패턴에 대한 검색
+    document.write("문자취환 : "+ txt.replace(/요/g, "yo") + "<br>");
+
+    document.write("배열 리턴 : "+ txt.split(" ")+ "<br>");
+    var arr = txt.split(" ");
+    document.write("배열 리턴 : "+ arr[1]+ "<br>");
+
+  </script>
+</body>
+</html>

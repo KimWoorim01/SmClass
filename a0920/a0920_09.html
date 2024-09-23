@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .red{
+      color: red;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .green{
+      color: green;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .gray{
+      background-color: lightgray;
+      color: lightseagreen;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    table{
+      width: 800px;
+      margin: 70px auto;
+      text-align: center;
+    }
+    th{
+      background: #efefef;
+    }
+    th, td{
+      width: 200px;
+      height: 40px;
+    }
+    table, th, td{
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>번호</th>
+      <th>제목</th>
+      <th>작성일</th>
+      <th>조회수</th>
+    </tr>
+    <script>
+      
+      var count = 0;
+
+      while(count <=20){
+        if(count%2==0){
+          document.write("<tr><td>"+count+"</td><td>이벤트 안내</td><td>2024-09-20</td><td>100</td></tr>")
+        }else{
+          document.write("<tr class='gray'><td>"+count+"</td><td>이벤트 안내</td><td>2024-09-20</td><td>100</td></tr>")
+        }
+        count++;
+      }
+
+    </script>
+    <!-- <tr>
+      <td>1</td>
+      <td>이벤트 안내</td>
+      <td>2024-09-20</td>
+      <td>100</td>
+    </tr> -->
+  </table>
+
+  <script>
+
+    //1-100까지 홀수 이면 red, 짝수이면 green 출력
+    // var count = 0;
+    // var data = "";
+    // while(count<100){
+    //   if(count%2==0){
+    //     data = "<p class='red'>"+count+"</p>"
+    //     document.write(data);
+    //   }else{
+    //     data = "<p class='green'>"+count+"</p>"
+    //     document.write(data);
+    //   }
+    //   count++
+    // }
+
+    
+  </script>
+</body>
+</html>

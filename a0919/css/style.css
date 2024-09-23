@@ -6,6 +6,7 @@
 }
 
 .pop-wrap {
+  margin: 20px auto;
   width: 650px;
   height: 804px;
   letter-spacing: -0.03em;
@@ -39,7 +40,7 @@
 }
 
 .pop-body {
-  padding: 20px;
+  padding: 10px;
   line-height: 24px;
   box-sizing: border-box;
 }
@@ -49,8 +50,8 @@
   height: 122px;
   box-sizing: border-box;
   background: #f8f8f8;
-  margin-bottom: 25px;
-  padding: 25px;
+  margin-bottom: 15px;
+  padding: 13px;
 }
 
 .form {
@@ -60,6 +61,10 @@
   box-sizing: border-box;
   padding: 25px;
   border: 1px solid #e8e8e8;
+}
+
+.form form {
+  margin-bottom: 10px;
 }
 
 .form label {
@@ -151,7 +156,7 @@
   letter-spacing: -0.03em;
 }
 .form .line_img{
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .form li label {
@@ -167,6 +172,17 @@
   color: #fff;
   line-height: 35px;
   text-align: center;
+}
+
+
+.form .dv0{
+  width: 20%;
+}
+.form .dv1{
+  width: 18%;
+}
+.form .dv2{
+  width: 16%;
 }
 
 .form li .low-weight {
@@ -185,6 +201,6 @@
 }
 
 .form li .obesity {
-  width: 36%;
+  width: 40%;
   background-color: #f15232;
 }

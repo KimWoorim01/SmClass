@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var tday = new Date();
+
+    var year = tday.getFullYear();
+    var month = tday.getMonth();
+    var textMonth;
+    var date = tday.getDate();
+    var textDate;
+    var day = tday.getDay();
+    var txtday;
+
+    if(month > 10){
+      textMonth = month + 1;
+    }else{
+      textMonth = "0" + (month+1);
+    }
+
+    if(date < 10){
+      textDate = "0" +date; 
+    }else{
+      textDate = date;
+    }
+
+    switch(day){
+      case 0:
+        txtday = "일요일";
+        break;
+      case 1:
+        txtday = "월요일";
+        break;
+      case 2:
+        txtday = "화요일";
+        break;
+      case 3:
+        txtday = "수요일";
+        break;
+      case 4:
+        txtday = "목요일";
+        break;
+      case 5:
+        txtday = "금요일";
+        break;
+      case 6:
+        txtday = "토요일";
+        break;
+    }
+
+
+    document.write(year + "-" + textMonth + "-" + textDate + ", "+txtday);
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>while</title>
+  <style>
+
+    .red{
+      color: lightcoral;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .blue{
+      color: lightblue;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <script>
+
+    var index = 1;
+    while(index <= 20){
+
+      if(index%2==0){
+        document.write("<p class='blue'>"+index+"</p>");
+      }else{
+        document.write("<p class='red'>"+index+"</p>");
+      }
+
+      index++;
+    }
+
+
+  </script>
+</body>
+</html>
