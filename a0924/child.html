@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>새창 오픈</div>
+  <label>부모창에서 자식창으로 전달 될 값</label>
+  <input type="text" id = "c_input">
+  <br><br>
+  <label>자식창에서 부모창으로 값 전달</label>
+  <hr>
+  <label></label>
+  <input type="text" id="cc_input">
+  <input type="button" onclick="send_value()" value="값 전달">
+</body>
+
+  <script>
+
+    function send_value(){
+      opener.document.getElementById("pp_input").value = document.getElementById("cc_input").value;
+      // window.parent.document.getElementById("pp_input").value = document.getElementById("cc_input").value;
+
+    }
+
+  </script>
+
+</html>

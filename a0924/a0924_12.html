@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>취미</h1>
+  <form action="http://www.daum.net" name="frm" method="get">
+
+    <input type="checkbox" id="game" name="hobby" class="hobby" value="game">
+    <label for="game">게임</label> <br>
+    
+    <input type="checkbox" id="run" name="hobby" class="hobby" value="run">
+    <label for="run">조깅</label> <br>
+    
+    <input type="checkbox" id="book" name="hobby" class="hobby" value="book">
+    <label for="book">독서</label> <br>
+
+    <input type="checkbox" id="swim" name="hobby" class="hobby" value="swim">
+    <label for="swim">수영</label> <br>
+
+    <input type="checkbox" id="movie" name="hobby" class="hobby" value="movie">
+    <label for="movie">영화</label> <br>
+
+    <input type="checkbox" id="drama" name="hobby" class="hobby" value="drama">
+    <label for="drama">드라마</label> <br>
+    <br>
+    <button type="button" onclick="hobbyConfirm()">확인</button>
+  </form>
+
+  <script>
+
+    function hobbyConfirm(){
+      //4개 이상 체크되어 있지 않으면 4개 이상 체크해야 확인 가능
+      //모두체크 할건지 물어보고 모두 체크 할것.
+
+      var checkList = document.querySelectorAll(".hobby");
+      var count = 0;
+      for(var i = 0; i < checkList.length; i++){
+        if(checkList[i].checked){
+          count++;
+        }
+      }
+
+      if(count >= 4){
+        alert("4개 이상 체크되었음.");
+        frm.submit();
+      }else{
+        if(confirm("모두 체크할까요?")){
+          
+          document.querySelectorAll(".hobby").forEach(function(d){
+            // console.log("넘어온 데이터 : " + this);
+            d.checked = true;
+          })
+          return;
+          // for(var i = 0; i < checkList.length; i++){
+          //   checkList[i].checked = true;
+          // }
+          // return;
+
+        }
+        
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>

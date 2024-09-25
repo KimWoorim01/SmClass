@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부모창</title>
+</head>
+<body>
+  <h1>회원가입</h1>
+  <label for="">아이디</label>
+  <input type="text" name="pid" id="pid">
+  <button type="button" onclick="id_check()">아이디 중복 확인</button>
+  <br>
+  <button type="button" onclick="confirm()">회원가입</button>
+  <script>
+    var openWin;
+    var checkConfirm = false;
+    function id_check(){
+      // alert("아이디 중복확인 시도.");
+      openWin = window.open("id_check.html","checkFrm","width=400, height = 500, resizable = no, scrollbars = no");
+
+    }
+
+    function confirm(){
+      if(!checkConfirm){
+        alert("중복체크를 실행해 주십시오.");
+        return;
+      }
+
+      alert("회원가입 성공");
+    }
+
+  </script>
+
+</body>
+</html>

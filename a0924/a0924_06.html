@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    function a_input(){
+      console.log(0);
+      console.log(1);
+      b_input();
+    }
+
+    function b_input(){
+      document.write("안녕하세요");
+    }
+
+    function calc(a,b,c){
+      // alert("합계 : " +Number(a+b+c));
+      return Number(a+b+c);
+    }
+
+    function send_text(){
+      
+      var t1 = document.querySelector("#text1").value;
+      var t2 = document.querySelector("#text2").value;
+      var t3 = document.querySelector("#text3").value;
+
+
+      var data = calc(Number(t1),Number(t2),Number(t3));
+
+      document.getElementById("c1").innerText = data;
+    }
+
+  </script>
+
+  <button type="button" onclick="a_input()">함수호출</button>
+  <button type="button" onclick="calc(10,2,35)">calc함수호출</button>
+  
+  <div id="c1"></div>
+  <input type="text" id="text1"><br>
+  <input type="text" id="text2"><br>
+  <input type="text" id="text3"><br>
+  <button type="button" onclick="send_text()">text함수호출</button>
+  
+</body>
+</html>

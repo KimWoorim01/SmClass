@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function conBtn(){
+      alert("버튼 클릭");
+
+      document.querySelector("#d01").innerHTML = "안녕하세요";
+      document.querySelector(".con").style.color = "red";         //하나만 바꿈
+      var allQuery = document.querySelectorAll(".con");
+
+      for(var i =0; i< allQuery.length; i++){
+        allQuery[i].style.background = "lightgray";
+      }
+
+      document.querySelector("h2").style.color = "blue";
+
+      // document.getElementById("con").innerText = "내용변경 완료!";
+      // console.log(document.getElementsByClassName("con"));
+      // var c_color = document.getElementsByClassName("con");
+      // console.log(c_color);
+      // c_color[0].style.color = "red";
+      
+    }
+  </script>
+</head>
+<body>
+  <h1 class="con">제목</h1>
+  <h2 id="d01">즐거운 하루</h2>
+  <div id="con">내용을 입력합니다.</div>
+  <p class="con">좋은 하루</p>
+  <span class="con">자바스크립트 수업</span>
+  <button type="button" onclick="conBtn()" id="conBtn">확인</button>
+</body>
+</html>

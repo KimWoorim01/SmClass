@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="#" id="agreeFrm" class="agreeFrm">
+    <label for="agree1">동의</label>
+    <input type="checkbox" id="agree1" name="agree1" class="agree" value="yes">
+    <br>
+    <label for="agree2">동의1</label>
+    <input type="checkbox" id="agree2" name="agree2" class="agree" value="yes">
+    <br>
+    <label for="agree3">동의2</label>
+    <input type="checkbox" id="agree3" name="agree3" class="agree" value="yes">
+    <br>
+
+    <button type="button" onclick="confirm()">확인</button>
+  </form>
+
+  <script>
+
+    function confirm(){
+
+      var checkList = document.querySelectorAll(".agree");
+
+      // console.log(checkList[0].getAttribute("checked"));
+      // console.log(checkList[0].setAttribute("checked"));
+
+      // console.log(checkList[0].checked);
+      //checkbox 가 check 되어 있으면 true 아니면 false
+
+      for(var i = 0; i < checkList.length; i++){
+        if(!checkList[i].checked){
+          alert( (i+1) + "번째 체크 박스가 체크되지 않았음.");          
+          return false;
+        }
+      }
+      
+      agreeFrm.submit();
+      // console.log(document.querySelectorAll(".agree").length);
+    }
+
+  </script>
+  
+  
+</body>
+</html>

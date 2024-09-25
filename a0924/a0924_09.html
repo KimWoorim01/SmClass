@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #wrap{
+      width: 500px;
+      height: 500px;
+      border: 1px solid black;
+      overflow: hidden;
+    }
+
+    img{
+      width: 100%;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <img id="img" src="img/i01.jpg">
+  </div>
+  <button onclick="prev()">이전</button>
+  <button onclick="next()">다음</button>
+  
+  <script>
+    var imageList = ["i01.jpg", "i02.jpg", "i03.jpg", "i04.jpg"];
+    var imageCount = 0;
+
+    function next(){
+      imageCount++;
+      if(imageCount > imageList.length-1){
+        imageCount = 0;
+      }
+
+      document.querySelector("#img").setAttribute("src", "img/"+imageList[imageCount]);
+      
+    }
+    
+    function prev(){
+      imageCount--;
+      if(imageCount < 0 ){
+        imageCount = imageList.length-1;
+      }
+      
+      document.querySelector("#img").setAttribute("src", "img/"+imageList[imageCount]);
+
+    }
+
+
+  </script>
+
+</body>
+</html>

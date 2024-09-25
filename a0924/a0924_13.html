@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <title>제이쿼리</title>
+  <script>
+    //제이쿼리 선언
+    // $(document).ready(function(){
+
+    // });
+
+    //제이쿼리 약식 선언
+    $(function(){
+      $("#d01").text("기체후 일향")     
+      $("#d01").html("<h1>만강하셨는가</h1>")     
+      $(".c01").text("그렇지 못하다.")      
+      $("#testImg").attr("src","img/i02.jpg")
+      $("#d01").css("background","lightgray");
+      document.querySelector("#testImg").setAttribute("src", "img/i03.jpg");
+    });
+
+
+  </script>
+  <style>
+    #d01{
+      width: 300px;
+      height: 250px;
+      border: 1px solid black;
+    }
+
+    #wrap
+    { 
+      width: 500px;
+      height: 400px;
+      overflow: hidden;
+    }
+  </style>
+
+  <script>
+    document.querySelector("#d01").innerText = "하이";
+  </script>
+
+</head>
+<body>
+  
+  <div id="d01">00</div>
+  <div class="c01">00</div>
+  <div id="wrap">
+    <img id="testImg" src="img/i01.jpg">
+  </div>
+
+</body>
+</html>
