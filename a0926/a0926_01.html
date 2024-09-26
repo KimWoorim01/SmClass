@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>학생성적 프로그램</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="js/script.js"></script>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    button {
+      width: 80px;
+      height: 40px;
+    }
+
+    table {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    th,
+    td {
+      width: 100px;
+      height: 40px;
+      text-align: center;
+    }
+
+    th:nth-child(2) {
+      width: 300px;
+    }
+
+    #update {
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>성적</h1>
+  <button type="button" id="dataBtn">데이터 가져오기</button>
+  <form>
+
+    <label>이름</label>
+    <input type="text" name="name" id="userName">
+    <label>국어</label>
+    <input type="text" name="korScore" id="korScore" class="korScore">
+    <label>영어</label>
+    <input type="text" name="engScore" id="engScore" class="engScore">
+    <label>수학</label>
+    <input type="text" name="mathScore" id="mathScore" class="mathScore">
+
+    <button type="button" id="searchBtn">찾기</button>
+    <button type="button" id="createBtn">입력</button>
+    <!-- <button type="button" id="saveBtn">수정</button> -->
+    <button type="button" id="update">수정 완료</button>
+    <button type="button" id="updateCancelBtn" hidden>수정 취소</button>
+
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th>이름</th>
+        <th>국어</th>
+        <th>영어</th>
+        <th>수학</th>
+        <th>합계</th>
+        <th>평균</th>
+        <th>삭제</th>
+      </tr>
+    </thead>
+
+    <tbody id="tbody">
+      <tr id="tr_1"></tr>
+      <td>1</td>
+      <td>홍길동</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
+      <td>300</td>
+      <td>100.00</td>
+      <td>
+        <button class="updateBtn">수정</button>
+        <button class="delBtn">삭제</button>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <title>Document</title>
+
+  <script>
+    //jquery start
+    $(function () {
+
+      $(document).on("click", ".delBtn", function () {
+        $(this).parent().parent().remove();
+      });
+      
+      // $("#dataBtn").click(()=>{
+
+      // });
+      $(document).on("click","#dataBtn",function(){
+        // alert("data loading...");
+        //ajax
+        $.ajax({
+          url:"https://apis.data.go.kr/B551011/PhotoGalleryService1/galleryList1?serviceKey=wBCDYHwh4VaKpHJHaDpRSIEzvIwQ2I%2ByakSIRZYmrHjsKIjcgcXco%2B6yZG12SI8NhnfyXmXsDniYNozNiadU%2BQ%3D%3D&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A&_type=json",
+          type : "get",
+          data : "",
+          dataType : "json",
+          success:function(data){
+            // console.log(data);
+            // console.log(data.response.body.items.item[0]);
+            // console.log(data.response.body.items);
+            var g_item = data.response.body.items.item;
+            console.log(g_item)
+
+            var inputData = "";
+            for (var i = 0; i < g_item.length; i++) {
+              inputData += "<tr>";
+              inputData += "<td>" + g_item[i].galContentId + "</td>";
+              inputData += "<td>" + g_item[i].galTitle + "</td>";
+              inputData += "<td>" + g_item[i].galModifiedtime + "</td>";
+              inputData += "<td>" + g_item[i].galPhotographer + "</td>";
+              inputData += "<td> <img src = '" + g_item[i].galWebImageUrl + "'></td>";
+              inputData += "<td><button class = 'delBtn'>삭제</button></td>";
+              inputData += "</tr>";
+            }
+
+            $("#tbody").append(inputData);
+
+          },
+          error:function(err){
+            alert("reponse fail");
+          }
+        });
+
+      })//btnClick event
+      
+
+    })//jquery end
+  </script>
+
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    table {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    th,
+    td {
+      width: 150px;
+      height: 40px;
+      text-align: center;
+    }
+
+    th:nth-child(2) {
+      width: 500px;
+    }
+
+    div {
+      width: 600px;
+      margin: 30px auto;
+      border: 1px solid black;
+    }
+    img{
+      width: 100px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>게시판</h1>
+  <button type="button" id="dataBtn">데이터 가져오기</button>
+  <table>
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th>제목</th>
+        <th>촬영일</th>
+        <th>촬영자</th>
+        <th>이미지</th>
+        <th>삭제</th>
+      </tr>
+    </thead>
+
+    <tbody id="tbody">
+    </tbody>
+
+  </table>
+
+</body>
+
+</html>

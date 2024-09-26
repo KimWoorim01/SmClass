@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <title>Document</title>
+
+  <style>
+
+
+  </style>
+  <script>
+
+    $(function(){
+      
+      
+
+      // $("#in").on("mouseover focus",function(){
+      //   $(this).css({
+      //   "border" : "4px solid black",
+      //   "background" : "gray"
+      //   });
+      // });
+
+      //$("#in").off("mouseover");          //이벤트 제거
+
+      // $("#in").trigger("mouseover");
+
+
+      // $("#in").mouseover(function(){
+      //   $(this).css({
+      //     "border" : "4px solid black",
+      //     "background" : "gray"
+      //   }); 
+      // });
+
+      // $("#in").focus(function(){
+      //   $(this).css({
+      //     "border" : "1px solid black",
+      //     "background" : "lightgray"
+      //   }); 
+      // });
+
+      // $("#in").mouseout(function(){
+      //   $(this).css({
+      //     "border" : "1px solid black",
+      //   }); 
+      // });
+
+      $(document).on("click","#slideOn",function(){
+        $(".box").stop();
+        $(".box").slideDown(500,"linear",function(){
+          
+        });
+      });
+      
+      $(document).on("click","#slideOff",function(){
+        $(".box").stop();
+        $(".box").slideUp(500,"linear",function(){
+          
+        });
+      });
+      
+      $(document).on("click","#fadeIn",function(){
+        $(".box").stop();
+        $(".box").fadeIn(1000,"swing",function(){
+          
+        });
+      });
+      
+      
+      $(document).on("click","#toggleBtn",function(){
+        $(".box").stop();
+        $(".box").slideToggle(1000,"linear");
+
+      });
+
+    });
+  
+  </script>
+
+  <style>
+    .content{
+      width: 400px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <!-- <input id="in" type="text"> -->
+   <button type="button" id="slideOn">슬라이드펼침</button>
+   <button type="button" id="slideOff">슬라이드닫힘</button>
+   <button type="button" id="fadeIn">페이드인</button>
+   <button type="button" id="toggleBtn">토글</button>
+   <div class="box">
+    <div class="content">
+      25일 인천시교육청에 따르면 시교육청은 지난 5일부터 12일까지 초등학교 교사·학생·학부모 <br>
+      등 2만475명을 대상으로 2025학년도 생존수영 교육 관련 설문 조사를 실시했다.
+    </div>
+   </div>
+  
+</body>
+</html>

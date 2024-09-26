@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <title>Document</title>
+
+  <script>
+    //jquery start
+    $(function () {
+
+      // var board = {
+      //   "no": 1,
+      //   "title": "Budget/Accounting Analyst II",
+      //   "date": "2024-07-06",
+      //   "name": "Evaleen Whorlow",
+      //   "hit": 16
+      // };
+
+      $(document).on("click", ".delBtn", function () {
+        $(this).parent().parent().remove();
+      });
+
+
+
+      $(document).on("click", "#dataBtn", function () {
+        //ajax start
+
+        var jsonData;
+        $.ajax({
+          url: "js/boardData.json",
+          type: "get",                                   //get,post
+          data: "",                                      //데이터 서버로 전송
+          dataType: "json",                              //response data type : json, html, xml, text...
+          success: function (data) {                       //서버송신 성공시
+            console.log(data);
+
+            var inputData = "";
+            for (var i = 0; i < data.length; i++) {
+              inputData += "<tr>";
+              inputData += "<td>" + data[i].no + "</td>";
+              inputData += "<td>" + data[i].title + "</td>";
+              inputData += "<td>" + data[i].date + "</td>";
+              inputData += "<td>" + data[i].name + "</td>";
+              inputData += "<td>" + data[i].hit + "</td>";
+              inputData += "<td><button class = 'delBtn'>삭제</button></td>";
+              inputData += "</tr>";
+            }
+
+            $("#tbody").append(inputData);
+
+            // var no_data = "";
+            // var title_data = [];
+            // for(var i = 0; i < data.length; i++){
+            //   no_data += data[i].no + ", ";
+            //   title_data[i] = data[i].title;                          //데이터 배열에 저장.
+            // }
+
+            // for(var i = 0; i< title_data.length; i++){                //데이터 배열에 저장
+            //   $("#d01").append(title_data[i] + ", ");                 //배열 데이터 순차 출력.
+            // }
+
+          },
+          error: function (error) {                             //서버송신 실패시
+            console.log("data receive fail : " + error);
+            alert("실패");
+          }
+
+        });
+
+        //ajax end
+
+      }); //BtnClick event end
+
+
+
+    })
+    //jquery end
+  </script>
+
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    table {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    th,
+    td {
+      width: 150px;
+      height: 40px;
+      text-align: center;
+    }
+
+    th:nth-child(2) {
+      width: 500px;
+    }
+
+    div {
+      width: 600px;
+      margin: 30px auto;
+      border: 1px solid black;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>게시판</h1>
+  <button type="button" id="dataBtn">데이터 가져오기</button>
+  <table>
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th>제목</th>
+        <th>날짜</th>
+        <th>작성자</th>
+        <th>조회수</th>
+        <th>삭제</th>
+      </tr>
+    </thead>
+
+    <tbody id="tbody">
+    </tbody>
+
+  </table>
+
+  <div id="d01"></div>
+
+</body>
+
+</html>
