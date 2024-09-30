@@ -3,9 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="js/box_script.js"></script>
+  <title>BoxControl</title>
+
+  <style>
+    #main{
+      width: 1000px;
+      height: 100px;
+      border: 2px solid black;
+      margin: 50px auto;
+    }
+
+    #box{
+      width: 100px;
+      height: 100px;
+      box-sizing: border-box;
+      border: 5px solid black;
+      background: lightcoral;
+      position: relative;
+    }
+
+    #wrap{
+      text-align: center;
+    }
+  </style>
+  
+  
 </head>
 <body>
+  <div id="wrap">
+    <h1>박스 이동</h1>
+    <button id="leftMoveBtn">좌측 이동</button>
+    <button id="rightMoveBtn">우측 이동</button>
+  </div>
   
+  <div id="main">
+    <div id="box"></div>
+  </div>
 </body>
 </html>
