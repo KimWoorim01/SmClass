@@ -11,10 +11,9 @@ a_list = [
 
 a_list.clear()
 for i in range(3):
-  a = []
   for j in range(3):
-    a.append(lotto[(i*3)+j])
-  a_list.append(a)
+    a_list[i][j] = lotto[(i*3)+j]
+
 
 
 aa_list = [
