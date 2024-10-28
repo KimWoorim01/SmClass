@@ -34,8 +34,8 @@ f.close()
 smtpName = "smtp.naver.com"
 smtpPort = 587
 # 자신의 네이버메일주소,pw, 받는사람이메일주소
-sendEmail = "yop133@naver.com"
-pw = "LDN53XPJ58R9"
+sendEmail = "yop122@naver.com"
+pw = "ejtmzm678052"
 recvEmail = "yop122@naver.com"
 title = "랭킹뉴스"
 content = "랭킹뉴스 파일을 첨부합니다."
