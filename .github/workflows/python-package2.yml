@@ -43,7 +43,7 @@ jobs:
     - name: library Install
       run: |
         pip install requests
-        pip install beatiFulSoup
+        pip install beautiFulSoup
         pip install pandas
         pip install lxml
 
